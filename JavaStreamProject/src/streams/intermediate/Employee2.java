@@ -9,13 +9,13 @@ enum Gender {
 	MALE, FEMALE; // 열거형
 }
 
-public class Employee {
+public class Employee2 {
 	String name;
 	Gender gender;
 	LocalDate dateOfBirth;
 	double income;
 	
-	public Employee(String name, Gender gender, LocalDate dateOfBirth, double income) {
+	public Employee2(String name, Gender gender, LocalDate dateOfBirth, double income) {
 		super();
 		this.name = name;
 		this.gender = gender;
@@ -69,14 +69,14 @@ public class Employee {
 		return str;
 	}
 	
-	public static List<Employee> employees(){
-		Employee e1 = new Employee("Hong", Gender.MALE, LocalDate.of(1991, Month.JANUARY, 1), 2343.0);
-		Employee e2 = new Employee("Kim", Gender.FEMALE, LocalDate.of(1992, Month.AUGUST, 13), 7100.0);
-		Employee e3 = new Employee("Han", Gender.MALE, LocalDate.of(1993, Month.APRIL, 16), 1300.0);
-		Employee e4 = new Employee("Choi", Gender.MALE, LocalDate.of(1994, Month.FEBRUARY, 3), 5555.0);
-		Employee e5 = new Employee("Lee", Gender.FEMALE, LocalDate.of(1995, Month.OCTOBER, 22), 2750.0);
-		Employee e6 = new Employee("Jeong", Gender.FEMALE, LocalDate.of(1996, Month.NOVEMBER, 23), 3402.0);
-		List<Employee> employees = Arrays.asList(e1, e2, e3, e4, e5, e6);
+	public static List<Employee2> employees(){
+		Employee2 e1 = new Employee2("Hong", Gender.MALE, LocalDate.of(1991, Month.JANUARY, 1), 2343.0);
+		Employee2 e2 = new Employee2("Kim", Gender.FEMALE, LocalDate.of(1992, Month.AUGUST, 13), 7100.0);
+		Employee2 e3 = new Employee2("Han", Gender.MALE, LocalDate.of(1993, Month.APRIL, 16), 1300.0);
+		Employee2 e4 = new Employee2("Choi", Gender.MALE, LocalDate.of(1994, Month.FEBRUARY, 3), 5555.0);
+		Employee2 e5 = new Employee2("Lee", Gender.FEMALE, LocalDate.of(1995, Month.OCTOBER, 22), 2750.0);
+		Employee2 e6 = new Employee2("Jeong", Gender.FEMALE, LocalDate.of(1996, Month.NOVEMBER, 23), 3402.0);
+		List<Employee2> employees = Arrays.asList(e1, e2, e3, e4, e5, e6);
 		return employees;
 	}
 	

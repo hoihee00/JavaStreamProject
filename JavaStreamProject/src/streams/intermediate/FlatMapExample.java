@@ -23,9 +23,9 @@ public class FlatMapExample {
 
 //		DoubleStream.of(0.3);
 		
-		OptionalDouble result = Employee.employees().stream().flatMapToDouble(new Function<Employee, DoubleStream>(){
+		OptionalDouble result = Employee2.employees().stream().flatMapToDouble(new Function<Employee2, DoubleStream>(){
 			@Override
-			public DoubleStream apply(Employee t) {
+			public DoubleStream apply(Employee2 t) {
 				return DoubleStream.of(t.getIncome());
 			}
 //		}).filter(n -> n > 8000).min();
@@ -43,9 +43,9 @@ public class FlatMapExample {
 		
 		System.out.println("------------------------------");
 		
-		Employee.employees().stream().flatMapToDouble(new Function<Employee, DoubleStream>(){
+		Employee2.employees().stream().flatMapToDouble(new Function<Employee2, DoubleStream>(){
 			@Override
-			public DoubleStream apply(Employee t) {
+			public DoubleStream apply(Employee2 t) {
 				return DoubleStream.of(t.income);
 //				return DoubleStream.of(t.getIncome);
 			}
@@ -54,9 +54,9 @@ public class FlatMapExample {
 		System.out.println("------------------------------");
 
 		
-		Employee.employees().stream().flatMap(new Function<Employee, Stream<String>>(){
+		Employee2.employees().stream().flatMap(new Function<Employee2, Stream<String>>(){
 			@Override
-			public Stream<String> apply(Employee t) {
+			public Stream<String> apply(Employee2 t) {
 				return Stream.of(t.name);
 			}
 //		}).findFirst().ifPresent(System.out::println); // 첫번째 값만 가져옴
@@ -64,9 +64,9 @@ public class FlatMapExample {
 
 		System.out.println("------------------------------");
 		
-		Optional<LocalDate> result2 = Employee.employees().stream().flatMap(new Function<Employee, Stream<LocalDate>>(){
+		Optional<LocalDate> result2 = Employee2.employees().stream().flatMap(new Function<Employee2, Stream<LocalDate>>(){
 			@Override
-			public Stream<LocalDate> apply(Employee t) {
+			public Stream<LocalDate> apply(Employee2 t) {
 				return Stream.of(t.getDateOfBirth());
 			}
 		}).reduce(new BinaryOperator<LocalDate>() {
